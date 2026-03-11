@@ -1,7 +1,29 @@
+name: Get Hot News
+
 on:
   schedule:
-    - cron: "0 */4 * * *"   # 每4小时执行一次（推荐）
-    # - cron: "0 8,20 * * *"  # 早8点和晚8点
-    # - cron: "0 * * * *"     # 每小时（太频繁）
-  
-  workflow_dispatch:  # 保留手动触发
+    - cron: "0 */12 * * *"  # 每12小时执行一次
+  workflow_dispatch:
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Run crawler
+      env:
+        FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        AI_API_KEY: ${{ secrets.AI_API_KEY }}
+      run: python main.py
