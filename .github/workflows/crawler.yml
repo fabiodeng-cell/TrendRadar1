@@ -2,26 +2,22 @@ name: Get Hot News
 
 on:
   schedule:
-    - cron: "0 */12 * * *"  # 每12小时执行一次
+    - cron: "0 */12 * * *"
   workflow_dispatch:
 
 jobs:
   crawl:
     runs-on: ubuntu-latest
-    
     steps:
-    - uses: actions/checkout@v3
-    
+    - uses: actions/checkout@v4
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.10'
-    
+        python-version: '3.11'
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    
+        pip install -r requirements.txt || pip install requests beautifulsoup4 lxml pyyaml feedparser
     - name: Run crawler
       env:
         FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
