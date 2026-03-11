@@ -1,71 +1,49 @@
-# ========== AI & 科技 ==========
+# AI & Tech
 AI
-人工智能
 ChatGPT
 Claude
-大模型
 LLM
 AIGC
-生成式AI
-机器学习
-深度学习
 AGI
+OpenAI
+Anthropic
+Gemini
+Copilot
+Cursor
+AI Agent
 
-# ========== 效率工具 ==========
-效率工具
-生产力
+# Productivity
 Notion
 Obsidian
-自动化
+automation
 workflow
-提示词
 Prompt
-时间管理
+knowledge management
 
-# ========== 投资经济 ==========
-投资
-经济
-股市
-A股
-基金
-理财
-加密货币
-Web3
-区块链
-宏观
-美联储
-央行
-利率
-通胀
+# Investment
+investment
+economy
+stock market
+A-share
+fund
+Federal Reserve
 
-# ========== 汽车营销 ==========
-汽车营销
-私域流量
-新能源汽车
-电动车
-比亚迪
-特斯拉
-理想
-蔚来
-小鹏
-用户运营
-品牌营销
-汽车出海
+# Automotive
+automotive marketing
+private domain traffic
+new energy vehicles
+BYD
+Tesla
+Li Auto
+NIO
 
-# ========== 个人成长 ==========
-个人成长
-职业发展
-副业
-创业
-认知升级
-思维模型
-决策
-学习方法
+# Personal Growth
+career development
+side business
+startup
+cognitive upgrade
 
-# ========== 排除词（!开头）==========
-!广告
-!推广
-!软文
-!入门教程
-!新手必看
-!限时优惠
+# Exclude
+!advertisement
+!promotion
+!tutorial
